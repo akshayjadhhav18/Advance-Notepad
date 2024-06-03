@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project tabbednotepad">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="C:/Users/Akshay/eclipse-workspace"/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/demo.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="TabbedNotepad"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="D:/notepad"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/freetts.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/en_us.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/cmutimelex.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/cmu_time_awb.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/cmulex.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/mbrola.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/cmu_us_kal.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/itextpdf-5.4.1-sources.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/cmudict04.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/freetts-jsapi10.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/notepad/lib/itextpdf-5.1.0.jar"/>
+        </jar>
+    </target>
+</project>
